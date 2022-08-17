@@ -46,6 +46,8 @@ $ nsml run -d t1-cmd
 # 메인 파일명이 'main.py'가 아닌 경우('-e' 옵션으로 entry point 지정)
 # 예: nsml run -d t1-cmd -e anotherfile.py
 $ nsml run -d t1-cmd -e [파일명]
+# 2GPU와 16CPU, 160GB 메모리를 사용하여 세션 실행하기   
+$ nsml run -d t1-cmd -g 2 -c 16 --memory 160G  
 
 # 세션 로그 확인하기
 # 세션명: [유저ID/데이터셋/세션번호] 구조
