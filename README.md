@@ -1,8 +1,9 @@
 # [2022 한국어 AI 경진대회](  https://competition.aihub.or.kr/2022) <br/>
 
+
 ![poster](https://github.com/KoreanAI2022/2022-Korean-AI-Competition/blob/main/src/poster.jpg?raw=true)
   <br/>  
-  
+  [NSML 바로가기](https://ncp.nsml.navercorp.com/)  
 > 한국어 음성 데이터를 활용한 한국어 음성인식 모델 개발 챌린지  <br/>  
   
 2022 한국어 AI 경진대회는 AI-Hub 개방 한국어 음성 데이터를 활용하여 한국어 음성인식 인공지능 모델을 개발하는 대회입니다.  <br/>  
