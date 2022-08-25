@@ -1,3 +1,4 @@
+from platform import architecture
 from typing import Tuple
 import math
 
@@ -547,18 +548,22 @@ def build_model(
         device: torch.device,
 ) -> nn.DataParallel:
 
+    architecture = config.architecture
     input_size = config.n_mels
 
-    model = build_deepspeech2(
-        input_size=input_size,
-        num_classes=len(vocab),
-        rnn_type=config.rnn_type,
-        num_rnn_layers=config.num_encoder_layers,
-        rnn_hidden_dim=config.hidden_dim,
-        dropout_p=config.dropout,
-        bidirectional=config.use_bidirectional,
-        activation=config.activation,
-        device=device,
-    )
+    if architecture == "deepspeech2":
+        model = build_deepspeech2(
+            input_size=input_size,
+            num_classes=len(vocab),
+            rnn_type=config.rnn_type,
+            num_rnn_layers=config.num_encoder_layers,
+            rnn_hidden_dim=config.hidden_dim,
+            dropout_p=config.dropout,
+            bidirectional=config.use_bidirectional,
+            activation=config.activation,
+            device=device,
+        )
+    else:
+        raise NameError(f"{config.architecture}에 해당하는 아키텍쳐가 존재하지 않습니다.")
 
     return model
